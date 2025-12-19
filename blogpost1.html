@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sophie's Daily Sparks</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff5f8;
+      color: #5a2a3a;
+      line-height: 1.6;
+    }
+
+    /* ===== Site Header ===== */
+    .site-header {
+      position: relative;
+      padding: 0;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      overflow: hidden;
+    }
+
+    .header-image {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .header-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 192, 203, 0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .site-header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      color: #ffffff;
+      text-shadow: 0 4px 10px rgba(255, 95, 162, 0.6);
+      margin-bottom: 10px;
+      animation: floatIn 1.5s ease forwards;
+    }
+
+    .site-header p {
+      color: #ff2f7d;
+      font-size: 1.1rem;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .nav-bar {
+      margin-top: 40px;
+      background: #ffd1e1;
+      padding: 15px 30px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #ff3f86;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 12px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background: #ffe0ec;
+      color: #ff5fa2;
+    }
+
+    .nav-links a:last-child { margin-right: 0; }
+
+    
+
+    /* ===== Blog Container ===== */
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .post-header {
+      margin-bottom: 20px;
+    }
+
+    .post-header h2 {
+      font-size: 2.4rem;
+      color: #ff5fa2;
+      font-weight: 600;
+    }
+
+    .author {
+      font-size: 0.9rem;
+      color: #a35c77;
+      margin-top: 5px;
+    }
+
+    .socials {
+      margin-top: 10px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      margin-right: 10px;
+      font-size: 0.9rem;
+      color: #ff7ab6;
+    }
+
+    .post-image {
+      margin: 30px 0;
+    }
+
+    .post-image img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(255, 95, 162, 0.25);
+    }
+
+    .post-content {
+      font-size: 1rem;
+      color: #6b3a4a;
+      margin-bottom: 40px;
+    }
+
+    .post-description {
+      background: #ffe6ef;
+      padding: 25px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      color: #7a3f55;
+    }
+
+    .post-description h3 {
+      color: #ff5fa2;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: #b0738b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <!-- Header Image -->
+    <img src="C:/Users/Dell Latitude 5430/Desktop/Sophie Blog Website/images/ribbon.png" alt="Header Image" class="header-image">
+
+    <!-- Overlay Content -->
+    <div class="header-overlay">
+      <h1>Sophie's Daily Sparks</h1>
+      <p>Sharing stories, ideas, and creativity</p>
+
+      <nav class="nav-bar">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Blogs.html">Blogs</a>
+          <a href="About me.html">About me</a>
+          <a href="Contact.html">Contact</a>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <div class="container">
+
+    <header class="post-header">
+      <h2>A Café</h2>
+      <div class="author">by Sophie ✨</div>
+      <div class="socials">
+        <a href="https://www.facebook.com/sophie.tab.58">Facebook</a>
+        <a href="https://www.instagram.com/ldynavier/#">Instagram</a>
+      </div>
+    </header>
+
+    <div class="post-image">
+      <img src="C:/Users/Dell Latitude 5430/Desktop/Sophie Blog Website/images/cfe2.jpg" alt="Blog image">
+    </div>
+
+    <div class="post-content">
+      <p>
+         There’s something irresistibly charming about the way A Café Boutique presents its treats. On a sunlit wooden table, three croissants steal the spotlight—one crowned with whipped cream and caramel, another drizzled in chocolate and garnished with a fresh strawberry, and a third filled with cream and topped with a delicate slice of berry. Surrounding them are four iced beverages, three in a soothing matcha green and one in a bold ruby red, each in branded cups that hint at the café’s stylish flair. It’s a visual feast that promises indulgence, perfect for slow mornings or sweet catch-ups with friends.
+      </p>
+    </div>
+
+    <div class="post-description">
+      <h3>Description</h3>
+      <p>
+        A cozy spread from A Café Boutique featuring three decadent croissants—each uniquely topped with cream, caramel, chocolate, and strawberries—paired with vibrant matcha and fruit tea drinks, all beautifully arranged on a rustic wooden table.
+      </p>
+    </div>
+
+    <footer>
+      © 2025 Sophie’s Daily Sparks
+    </footer>
+
+  </div>
+
+</body>
+</html>

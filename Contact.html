@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Sophie’s Daily Sparks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff1f4;
+    color: #333;
+}
+
+/* ========== HEADER WITH BACKGROUND IMAGE ========== */
+header {
+    text-align: center;
+    padding: 100px 20px 70px;
+    background-image: url("C:/Users/Dell Latitude 5430/Desktop/Sophie Blog Website/images/ribbon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 200, 220, 0.45);
+    z-index: 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    animation: floatText 3s ease-in-out infinite alternate;
+}
+
+.header-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    color: #fff;
+    text-shadow: 0 0 12px #f8398f, 0 0 25px #ff66b3;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.header-content p {
+    font-size: 1.3em;
+    color: #ffe6f2;
+    text-shadow: 0 0 6px #f1a6ca;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.5s;
+}
+
+/* NAVIGATION */
+nav {
+    margin: 25px auto 0;
+    display: inline-flex;
+    gap: 12px;
+    background: rgba(255, 182, 211, 0.9);
+    padding: 6px 10px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+nav a {
+    font-weight: 700;
+    font-size: 1em;
+    color: #ee1c70;
+    padding: 5px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    text-decoration: none; 
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.6);
+    color: #ff3399;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffe6f2, #ffd1e8);
+    box-shadow: 0 15px 40px rgba(255,120,180,0.35);
+    text-align: center;
+    animation: fadeIn 1.5s forwards;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    color: #ff2f92;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    color: #c41466;
+    margin-bottom: 25px;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.social-links a img {
+    width: 60px;
+    transition: transform 0.3s;
+    opacity: 0;
+    animation: popIn 0.8s forwards;
+}
+
+.social-links a:nth-child(1) img { animation-delay: 0.2s; }
+.social-links a:nth-child(2) img { animation-delay: 0.4s; }
+
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+/* CONTACT FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: 2px solid #ffb6d3;
+    font-size: 1em;
+    outline: none;
+    resize: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.contact-form input:nth-child(1) { animation-delay: 0.6s; }
+.contact-form input:nth-child(2) { animation-delay: 0.8s; }
+.contact-form textarea { animation-delay: 1s; }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff3399;
+    box-shadow: 0 0 8px rgba(255, 51, 153, 0.5);
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff66b3, #ff3399);
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: popIn 0.8s forwards 1.2s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg,#ffe6f2,#ffd1e8);
+    color: #ff3399;
+    font-weight: bold;
+    margin-top: 50px;
+    border-radius: 15px 15px 0 0;
+    animation: fadeIn 1.5s forwards 0.5s;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .header-content h1 { font-size: 2.2em; }
+    .header-content p { font-size: 1em; }
+
+    nav { gap: 8px; padding: 5px 8px; }
+
+    nav a { font-size: 0.9em; padding: 4px 8px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Contact</h1>
+        <p>Get to know Sophie and her daily sparks ✨</p>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Blogs.html">Blogs</a>
+        <a href="About me.html">About Me</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <h2>Let’s Connect! ✨</h2>
+    <p>Send me a message, or follow me on social media! 🌸</p>
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/ldynavier/" target="_blank">
+            <img src="C:/Users/Dell Latitude 5430/Desktop/Sophie Blog Website/images/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/sophie.tab.58" target="_blank">
+            <img src="C:/Users/Dell Latitude 5430/Desktop/Sophie Blog Website/images/fb.png" alt="Facebook">
+        </a>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/mzdppgye" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message 💌</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 Sophie’s Daily Sparks. All rights reserved.
+</footer>
+
+</body>
+</html>
